@@ -7,7 +7,7 @@ Rise and shine motherhumper! Take one of these beautiful orange pills and bright
 
 Made by refining the finest powder of white gold supplied by your friendly neighborhood junkie plantation, mixed with some high-tech stuff and cooked over burning Raiders, this stuff will surely make your life easier! Side effects? What side effects? This stuff is an accepted drug on Glitterworlds, boy, like cigarettes were back on Earth in the 21th century. Except this has less cancer! What are you waiting for? Go out and buy some Sunrise™ today!
 
-Ever felt like you're about to go Berserk because those damn sensory mechanites hurt like hell? Ever wondered why you have to watch the slow death of your friend just because he caught the Flu and the next day he caught the Plague? Do you hate Penoxycyline? Well then, I've got you covered!
+Ever felt like you're about to go Berserk because those damn sensory mechanites hurt like hell? Ever wondered why you have to watch the slow death of your friend just because he caught the Flu and the next day he caught the Plague too? Do you hate Penoxycyline? Well then, I've got you covered!
 
 Time to take the red pill and I'll guarantee this antibiotic will clean your system faster than Neo dodges bullets! Cure Pill™ will fix you right up, buddy. What, you're in pain? No problem, this stuff has painkillers in it too! Listen to Morpheus and take the red pill today! Just don't forget that antibiotics will temporarily blow your own immune system back to the stone age too!
 
