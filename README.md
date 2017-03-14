@@ -1,5 +1,5 @@
 # More Drugs
-Have you ever thought how much it sucks that most drugs can incur heavy penalties after just one use, especially in A16? Have you eve wondered why we don't have an antibiotic with *somewhat* realistic effects?
+Have you ever thought how much it sucks that most drugs can incur heavy penalties after just one use, especially in A16? Have you ever wondered why we don't have an antibiotic with *somewhat* realistic effects?
 
 **Well fear not, for I bring you More Drugs!**
 
