@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Pretty much copied yayo and edited.
+I've left a few notes here and there for the curious. Search for "Notes" to quickly jump to one! -->
+<Sunrise>
+	<ThingDef ParentName="DrugPillBase">
+		<defName>Sunrise</defName>
+		<label>Sunrise</label>
+		<!-- Notes: this is a masterwork description. All craftsdwarfship is of the hightest quality. It is menacing with bullshit.
+		On the picture is a burning Raider surrounded b Colonists. The Colonists cook crack over the Raider. -->
+		<description>Named after users described it's effects as "everything being brighter", Sunrise is a refined general performance enhancing drug. \n\nThe small yellow pills are widely accepted on most glitterworlds since the drug's addiction rate is very low and withdrawal effects are so negligible, most addicts don't even notice. Other, less advanced worlds use it as a light combat drug. \n\nThe effects of the pill lasts about one day. Sunrise is designed for long-term usage. Withdrawal effects are negligible and disappear in a day or two.</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/Sunrise</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>500</WorkToMake>
+			<MarketValue>16</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<joy>0.10</joy>
+			<drugCategory>Social</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>SunriseHigh</hediffDef>
+					<severity>1.0</severity>
+					<toleranceChemical>Sunrise</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>SunriseTolerance</hediffDef>
+					<severity>0.011</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Sunrise</chemical>
+				<!-- Notes: very low addiction rate, needs several doses popped on the same day to even have a chance to addict.-->
+				<addictiveness>0.008</addictiveness>
+				<minToleranceToAddict>0.04</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<!-- Notes: below line will cause Raiders to feel free to pop one before they attack you. -->
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+				<listOrder>1002</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+	<HediffDef>
+		<defName>SunriseHigh</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>high on sunrise</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<!-- Notes: effect will last for a bit more than one day.-->
+				<severityPerDay>-0.85</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>SunriseHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>SunriseHigh</hediff>
+		<stages>
+			<li>
+				<label>high on sunrise</label>
+				<description>The world seems brighter today.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- Sunrise addiction -->
+	<ChemicalDef>
+		<defName>Sunrise</defName>
+		<label>Sunrise</label>
+		<addictionHediff>SunriseAddiction</addictionHediff>
+		<toleranceHediff>SunriseTolerance</toleranceHediff>
+	</ChemicalDef>
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>Chemical_Sunrise</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>Sunrise</label>
+		<description>Because of a Sunrise addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+		<listPriority>51</listPriority>
+	</NeedDef>
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>SunriseTolerance</defName>
+		<label>sunrise tolerance</label>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<!-- Notes: tolerance per pill is 0.011 and effect lasts for a bit more than one day. So if ou use it smart (which isn't hard to do in this case) you'll be just fine. -->
+				<severityPerDay>-0.01</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>Sunrise</chemical>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="AddictionBase">
+		<defName>SunriseAddiction</defName>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<label>sunrise addiction</label>
+		<causesNeed>Chemical_Sunrise</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<!-- Notes: yeah, this "addiction"isn't really that severe. Goes away after 2 days or so.
+				Withdrawal effects aren't that severe either.-->
+				<severityPerDay>-0.45</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>SunriseWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>SunriseAddiction</hediff>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>sunrise withdrawal</label>
+				<description>It's not bright anymore.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Sunrise>

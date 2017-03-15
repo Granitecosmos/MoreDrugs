@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nothing spectacular here. -->
+<ResearchProjectDefs>
+	<ResearchProjectDef>
+		<defName>CurePillProduction</defName>
+		<label>Cure Pill Production</label>
+		<description>Learn to produce Cure Pill, an anti-biotic and painkiller drug.</description>
+		<baseCost>200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>PsychiteRefining</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>SunriseProduction</defName>
+		<label>Sunrise Production</label>
+		<description>Learn to produce Sunrise, a synthetic general-performance-enhancing drug.</description>
+		<baseCost>750</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>PsychiteRefining</li>
+		</prerequisites>
+	</ResearchProjectDef>
+</ResearchProjectDefs>

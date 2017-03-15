@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Combined old malari-block and beer functions here to make this.
+I've left a few notes here and there for the curious. Search for "Notes" to quickly jump to one! -->
+<CurePill>
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>CurePill</defName>
+		<label>Cure Pill</label>
+		<!-- Notes: this is a masterwork description. All craftsdwarfship is of the hightest quality. It is menacing with formatting.
+		On the picture is a moronic modder surrounded by forum posters. The modder is in a fetal position. The modder is crying. -->
+		<description>Medical pills containing painkillers and antibiotic substances. \n\nGrants a massive boost to the immune system; widely used for treating diseases and reducing painful symptoms of rogue mechanite infections. \n\nThe antibiotic effect lasts about three days. The patient's immune system will be weakened and will need time to recover after the effect. This recovery stage usually lasts about two days.</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/CurePill</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>500</WorkToMake>
+			<MarketValue>20</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>CurePillHigh</hediffDef>
+					<severity>1.0</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>CurePillProduction</researchPrerequisite>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<PsychoidLeaves>3</PsychoidLeaves>
+			<HerbalMedicine>3</HerbalMedicine>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<!-- Notes: addiction would just screw things up. Honestly, has anyone got addicted to an antibiotic before? -->
+				<addictiveness>0</addictiveness>
+				<listOrder>1001</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+	<HediffDef>
+		<defName>CurePillHigh</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Cure Pill</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<!-- Notes: guaranteed to last for 5 days! -->
+				<severityPerDay>-0.19</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<!-- Notes: this is where the fun begins. These stages will occur starting from the bottom of the list.
+			Feel free to inspect! -->
+			<li>
+				<minSeverity>0.00</minSeverity>
+				<label>recovering</label>
+				<painOffset>-0.05</painOffset>
+				<restFallFactor>1.05</restFallFactor>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.10</minSeverity>
+				<label>recovering</label>
+				<painOffset>-0.05</painOffset>
+				<restFallFactor>1.05</restFallFactor>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.20</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.20</minSeverity>
+				<label>recovering</label>
+				<painOffset>-0.1</painOffset>
+				<restFallFactor>1.1</restFallFactor>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.35</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.30</minSeverity>
+				<label>weakened</label>
+				<painOffset>-0.1</painOffset>
+				<restFallFactor>1.1</restFallFactor>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.5</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.40</minSeverity>
+				<label>medicated</label>
+				<painOffset>-0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>1.0</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</CurePill>
