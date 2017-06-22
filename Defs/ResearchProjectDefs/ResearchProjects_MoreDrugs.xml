@@ -21,4 +21,14 @@
 			<li>PsychiteRefining</li>
 		</prerequisites>
 	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ThrumboPowderProduction</defName>
+		<label>Thrumbo Powder Production</label>
+		<description>Learn to produce Thrumbo powder, a rare combat drug made from grounded thrumbo horn and neutroamine.</description>
+		<baseCost>1250</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>DrugProduction</li>
+		</prerequisites>
+	</ResearchProjectDef>
 </ResearchProjectDefs>

@@ -16,7 +16,7 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 		<statBases>
 			<WorkToMake>500</WorkToMake>
 			<MarketValue>20</MarketValue>
-			<Mass>0.002</Mass>
+			<Mass>0.05</Mass>
 		</statBases>
 		<techLevel>Industrial</techLevel>
 		<ingestible>
