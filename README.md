@@ -37,4 +37,5 @@ Version 1.0.16.0.0
 Version 1.0.17b.0.0
 - Updated for A17b
 - Switched to patching for editing vanilla defs
+- Increased drug mass to reflect vanilla A17 changes
 - Added Thrumbo Powder
