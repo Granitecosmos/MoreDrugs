@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Pretty much copied yayo and edited.
 I've left a few notes here and there for the curious. Search for "Notes" to quickly jump to one! -->
-<Sunrise>
+<Defs>
 	<ThingDef ParentName="DrugPillBase">
 		<defName>Sunrise</defName>
 		<label>Sunrise</label>
@@ -32,9 +32,23 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>SunriseTolerance</hediffDef>
 					<severity>0.011</severity>
+					<divideByBodySize>true</divideByBodySize>
 				</li>
 			</outcomeDoers>
 		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>SunriseProduction</researchPrerequisite>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<productCount>5</productCount>
+		</recipeMaker>
+		<costList>
+			<Yayo>2</Yayo>
+			<HerbalMedicine>1</HerbalMedicine>
+			<Neutroamine>1</Neutroamine>
+			<PsychoidLeaves>15</PsychoidLeaves>
+		</costList>
 		<comps>
 			<li Class="CompProperties_Drug">
 				<chemical>Sunrise</chemical>
@@ -75,7 +89,7 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 					</li>
 					<li>
 						<capacity>Manipulation</capacity>
-						<offset>0.1</offset>
+						<offset>0.05</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
@@ -165,4 +179,4 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 			</li>
 		</stages>
 	</ThoughtDef>
-</Sunrise>
+</Defs>
