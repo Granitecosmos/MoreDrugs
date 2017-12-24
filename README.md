@@ -32,13 +32,11 @@ Version 1.0.16.0.0
 
 Version 1.0.17b.0.0
 - Updated for A17b
-- Switched to patching for editing vanilla defs
 - Increased drug mass to reflect vanilla A17 changes
 - Added Thrumbo Powder
 
 Version 1.0.18.0.0
 - Updated for B18
-- Optimized Xpathing code
 - Added separate research tab for the mod
 - Fixed Cure Pill not granting the full buff to animals with larger body size modifiers than humans
 - Changed Cure Pill's recipe to require normal medicine instead of herbal; market value changed accordingly
