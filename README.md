@@ -17,10 +17,6 @@ Looking at that Thrumbo horn, no traders in a decade, and you want to get someth
 
 These goodies also come with their own respective research.
 
-**However, all this stuff comes at a cost. In this case the cost is the Tech Tree.**
-Since the current iteration isn't exactly mod-friendly, especially not so when we include several mods, I didn't even bother with coordinates. So please use a mod that reverts the Tech Screen to pre-A16 state. Honestly, since Tynan is a cool guy who wants the game to be mod-friendly, the Tech Tree will change anyway so it isn't such a huge loss.
-I personally recommend skyarkhangel's **[Old style research menu mod](https://ludeon.com/forums/index.php?topic=28609.0)**.
-
 ## Balance
 Really not sure about this one. Sunrise™ is probably a bit too powerful right now and I might have to add Neutroamine to the recipe of Cure Pill™ too. Thrumbo Powder should be ok, it's a rare substitute for Go-Juice. Only time can tell if I got the balancing right. And feedback, of course.
 
@@ -39,3 +35,14 @@ Version 1.0.17b.0.0
 - Switched to patching for editing vanilla defs
 - Increased drug mass to reflect vanilla A17 changes
 - Added Thrumbo Powder
+
+Version 1.0.18.0.0
+- Updated for B18
+- Optimized Xpathing code
+- Added separate research tab for the mod
+- Fixed Cure Pill not granting the full buff to animals with larger body size modifiers than humans
+- Changed Cure Pill's recipe to require normal medicine instead of herbal; market value changed accordingly
+- Decreased Sunrise's manipulation bonus from 10% to 5%
+- Decreased the amount of Thrumbo Powder the player can craft from one horn from 90 to 60 to represent the value nerf of the horn in B18 Core; market value unchanged
+- Thrumbo Powder's small dose now grants 70% pain factor instead of 80%
+- Decreased Thrumbo Powder's withdrawal mood debuff from -40 to -35
