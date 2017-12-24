@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Combined old malari-block and beer functions here to make this.
 I've left a few notes here and there for the curious. Search for "Notes" to quickly jump to one! -->
-<CurePill>
+<Defs>
 	<ThingDef ParentName="MakeableDrugPillBase">
 		<defName>CurePill</defName>
 		<label>Cure Pill</label>
@@ -15,7 +15,7 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 		<rotatable>false</rotatable>
 		<statBases>
 			<WorkToMake>500</WorkToMake>
-			<MarketValue>20</MarketValue>
+			<MarketValue>60</MarketValue>
 			<Mass>0.05</Mass>
 		</statBases>
 		<techLevel>Industrial</techLevel>
@@ -25,6 +25,8 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>CurePillHigh</hediffDef>
 					<severity>1.0</severity>
+					<!-- Notes: the line below makes sure one pill has the full effect even on large creatures. -->
+					<divideByBodySize>false</divideByBodySize>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -36,7 +38,7 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 		</recipeMaker>
 		<costList>
 			<PsychoidLeaves>3</PsychoidLeaves>
-			<HerbalMedicine>3</HerbalMedicine>
+			<Medicine>3</Medicine>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Drug">
@@ -123,4 +125,4 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 			</li>
 		</stages>
 	</HediffDef>
-</CurePill>
+</Defs>
