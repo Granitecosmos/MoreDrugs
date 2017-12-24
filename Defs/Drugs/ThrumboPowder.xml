@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Pretty much copied yayo and edited.
 I've left a few notes here and there for the curious. Search for "Notes" to quickly jump to one! -->
-<ThrumboPowder>
+<Defs>
 	<ThingDef ParentName="MakeableDrugBase">
 		<defName>ThrumboPowder</defName>
 		<label>Thrumbo Powder</label>
@@ -42,6 +42,7 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>ThrumboPowderTolerance</hediffDef>
 					<severity>0.05</severity>
+					<divideByBodySize>true</divideByBodySize>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -50,7 +51,7 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 			<recipeUsers>
 				<li>DrugLab</li>
 			</recipeUsers>
-			<productCount>90</productCount>
+			<productCount>60</productCount>
 		</recipeMaker>
 		<costList>
 			<Neutroamine>15</Neutroamine>
@@ -59,7 +60,7 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 		<comps>
 			<li Class="CompProperties_Drug">
 				<chemical>ThrumboPowder</chemical>
-				<!-- Notes: first one never addicts, as long as u use it sparingly.-->
+				<!-- Notes: first one never addicts, as long as you use it sparingly.-->
 				<addictiveness>0.1</addictiveness>
 				<minToleranceToAddict>0.06</minToleranceToAddict>
 				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
@@ -91,10 +92,9 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 			<!-- Notes: this is where the fun begins. These stages will occur starting from the bottom of the list.
 			Feel free to inspect! -->
 			<li>
-				<minSeverity>0.00</minSeverity>
 				<label>small dose</label>
 				<painOffset>-0.15</painOffset>
-				<painFactor>0.8</painFactor>
+				<painFactor>0.7</painFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -261,8 +261,8 @@ I've left a few notes here and there for the curious. Search for "Notes" to quic
 			<li>
 				<label>thrumbo powder withdrawal</label>
 				<description>I don't feel well without that stuff anymore, at all... Must... Get... MORE!</description>
-				<baseMoodEffect>-40</baseMoodEffect>
+				<baseMoodEffect>-35</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
-</ThrumboPowder>
+</Defs>
